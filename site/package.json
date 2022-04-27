@@ -18,7 +18,7 @@
 		"test:coverage": "jest --coverage=true",
 		"test:update": "jest --verbose --updateSnapshot"
 	},
-	"author": "Imran Sayed",
+	"author": "Rahul Dhangar",
 	"license": "MIT",
 	"dependencies": {
 		"dotenv": "^8.2.0",

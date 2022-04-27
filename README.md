@@ -1,10 +1,4 @@
-## 🎨 [Gatsby WooCommerce themes - Electra](https://gatsby-woocommerce-theme.netlify.app/)
-[![Project Status: Active.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-![Stars](https://img.shields.io/github/stars/imranhsayed/gatsby-woocommerce-themes?label=%E2%AD%90%20Stars)
-![Forks](https://img.shields.io/github/forks/imranhsayed/gatsby-woocommerce-themes?color=%23ff69b4)
-![Contributors](https://img.shields.io/github/contributors/imranhsayed/gatsby-woocommerce-themes?color=blue)
-[![Download counter](https://img.shields.io/npm/dt/gatsby-woocommerce-theme.svg)](https://www.npmjs.com/package/gatsby-woocommerce-theme)
-![Follow](https://img.shields.io/github/followers/imranhsayed?label=Please%20follow%20%20to%20support%20my%20work%20%F0%9F%99%8F&style=social)
+## 🎨 [Gatsby theme](https://gatsby-woocommerce-themes-flame.vercel.app/) inspired by [Gatsby WooCommerce themes - Electra](https://gatsby-woocommerce-theme.netlify.app/)
 
 - A Gatsby theme for WooCommerce, using Decoupled Architecture
 - Front end in React
@@ -43,7 +37,7 @@ This theme uses `gatsby-source-wordpress@v4 BETA`
 
 | Name                                                   | Github Username |
 |--------------------------------------------------------|-----------------|
-| [Imran Sayed](mailto:codeytek.academy@gmail.com)       |  @imranhsayed   |
+| [Rahul Dhangar](mailto:rahuldhangar@gmail.com)       |  @rahuldhangar   |
 
 ### Home Page demo
 ![](demos/home-page.gif)
@@ -89,21 +83,21 @@ Env variables from these file will be consumed by Apollo client on client side.
 ### WordPress Setup
 1. On your WordPress site, download, Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
 
-a. [Headless CMS](https://github.com/imranhsayed/gatsby-woocommerce-themes/blob/master/wordpress/plugins/headless-cms.zip)
+a. [Headless CMS](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/headless-cms.zip)
 
-b. [woocommerce](https://github.com/imranhsayed/gatsby-woocommerce-themes/blob/master/wordpress/plugins/woocommerce.4.4.1.zip)
+b. [woocommerce](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/woocommerce.4.4.1.zip)
 
-c. [wp-graphql](https://github.com/imranhsayed/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql.zip) - tested on ( v1.0.0 )
+c. [wp-graphql](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql.zip) - tested on ( v1.0.0 )
 
-d. [wp-graphql-woocommerce](https://github.com/imranhsayed/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-woocommerce.zip)
+d. [wp-graphql-woocommerce](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-woocommerce.zip)
 
-e. [wp-gatsby](https://github.com/imranhsayed/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-gatsby.zip)
+e. [wp-gatsby](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-gatsby.zip)
 
-f. [Yoast-SEO](https://github.com/imranhsayed/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wordpress-seo.14.5.zip)
+f. [Yoast-SEO](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wordpress-seo.14.5.zip)
 
-g. [wp-graphql-yoast-seo](https://github.com/imranhsayed/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-yoast-seo.zip)
+g. [wp-graphql-yoast-seo](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-yoast-seo.zip)
 
-h. [wp-graphql-jwt-authentication](https://github.com/imranhsayed/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-jwt-authentication.zip)
+h. [wp-graphql-jwt-authentication](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-jwt-authentication.zip)
 
 * You can follow the readme to setup [https://github.com/wp-graphql/wp-graphql-jwt-authentication#install-activate--setup](https://github.com/wp-graphql/wp-graphql-jwt-authentication#install-activate--setup)
 
@@ -138,15 +132,6 @@ npm run build    # When ready for production.
 Your site is now running at `http://localhost:8000`!
 
 _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data.
-
-### 📕 Storybook:
-
-For Storybook:
-
-* `cd package/gatsby-wooocommerce-theme`
-* `npm run storybook`
-
-![](demos/storybook.png)
 
 ### :package: Adding/Removing a new package to site folder
 
@@ -233,3 +218,6 @@ Follow its readme on npm.js
 
 ## Helpful Tools:
 1. [Apollo Client Developer Tools Chrome Extension](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm/related)
+
+## Thank You
+[Imran H Sayed](https://github.com/imranhsayed) for generously releasing Electra theme and allowing the devs to use it on their projects.

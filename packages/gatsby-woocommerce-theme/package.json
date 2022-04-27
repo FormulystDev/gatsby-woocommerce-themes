@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "description": "Gatsby WooCommerce Theme - Electra",
   "main": "index.js",
-  "author": "Imran Sayed",
+  "author": "Rahul Dhangar",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -80,13 +80,13 @@
     "react",
     "javascript"
   ],
-  "homepage": "https://github.com/imranhsayed/gatsby-woocommerce-themes#readme",
+  "homepage": "https://github.com/FormulystDev/gatsby-woocommerce-themes#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imranhsayed/gatsby-woocommerce-themes.git"
+    "url": "git+https://github.com/FormulystDev/gatsby-woocommerce-themes.git"
   },
   "bugs": {
-    "url": "https://github.com/imranhsayed/gatsby-woocommerce-themes/issues"
+    "url": "https://github.com/FormulystDev/gatsby-woocommerce-themes/issues"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",

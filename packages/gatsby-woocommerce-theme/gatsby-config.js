@@ -1,20 +1,20 @@
 module.exports = ({ wordPressUrl, gatsbySiteUrl, googleTagManagerId, fbAppId }) => ({
   siteMetadata: {
     title: `Gatsby WooCommerce Theme`,
-    description: `Codeytek - Gatsby WooCommerce Theme`,
+    description: `Formulyst - Gatsby WooCommerce Theme`,
 	siteUrl: gatsbySiteUrl,
 	wordPressSiteUrl: wordPressUrl,
-    author: `@imranhsayed`,
+    author: `@rahuldhangar`,
 	fbAppId: fbAppId,
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: googleTagManagerId,
-        includeInDevelopment: false,
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-tagmanager",
+    //   options: {
+    //     id: googleTagManagerId,
+    //     includeInDevelopment: false,
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -29,6 +29,12 @@ module.exports = ({ wordPressUrl, gatsbySiteUrl, googleTagManagerId, fbAppId }) 
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
+        schema: {
+          perPage: 20,
+          timeout: 300000,
+          requestConcurrency: 5, // currently set to undefined
+          previewRequestConcurrency: 2, // currently set to undefined
+        },
         url: `${wordPressUrl}/graphql`,
         verbose: true,
         develop: {
