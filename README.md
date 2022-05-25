@@ -219,5 +219,15 @@ Follow its readme on npm.js
 ## Helpful Tools:
 1. [Apollo Client Developer Tools Chrome Extension](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm/related)
 
+## Tested on versions:
+nvm list			:	14.19.1
+npm -v			:	6.14.16
+node -v			:	14.19.1
+yarn -v			:	1.2.18
+
+### Note:
+Don't forget to add .env file vars as per .env.example
+
+
 ## Thank You
 [Imran H Sayed](https://github.com/imranhsayed) for generously releasing Electra theme and allowing the devs to use it on their projects.
