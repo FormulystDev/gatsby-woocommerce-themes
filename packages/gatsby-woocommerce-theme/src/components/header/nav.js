@@ -161,7 +161,7 @@
 														>
 															<Link
 																className="header-nav__submenu-link"
-																to={ `concerns/#list-${subMenu.slug}` } /* Rahul normalizePath( menu.node.url ) */
+																to={ `/concerns/#list-${subMenu.slug}` } /* Rahul normalizePath( menu.node.url ) */
 															>
 																{ subMenu.name }
 															</Link>

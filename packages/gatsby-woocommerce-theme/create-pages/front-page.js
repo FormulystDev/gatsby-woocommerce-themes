@@ -26,13 +26,13 @@ query GET_FRONT_PAGE {
       }
     }
   }
-  products: allWpProduct(limit: 1000) {
+  products: allWpProduct(limit: 500, sort: {order: DESC, fields: date},) {
     edges {
       node {
-      ...ProductsFragment
-      seo {
-        ...SeoFragment
-      }
+		...ProductsFragment
+		seo {
+			...SeoFragment
+		}
       }
     }
   }
@@ -40,7 +40,7 @@ query GET_FRONT_PAGE {
 ${ ProductsFragment }
 ${ SeoFragment }
 `;
-
+// products: allWpProduct(limit: 3, filter: {id: {in: ["22", "20", "14", "111"]}}, sort: {order: DESC, fields: date},)
 module.exports = async ( { actions, graphql } ) => {
 
 	const { createPage } = actions;
@@ -85,17 +85,17 @@ module.exports = async ( { actions, graphql } ) => {
 				categories,
 				allProducts,
 				categoryName: 'all',
-				postSearchData: {
-					products: allProducts,
-					options: {
-						indexStrategy: `Prefix match`,
-						searchSanitizer: `Lower Case`,
-						TitleIndex: true,
-						AuthorIndex: true,
-						CategoryIndex: true,
-						SearchByTerm: true,
-					},
-				},
+				// postSearchData: {
+				// 	products: allProducts,
+				// 	options: {
+				// 		indexStrategy: `Prefix match`,
+				// 		searchSanitizer: `Lower Case`,
+				// 		TitleIndex: true,
+				// 		AuthorIndex: true,
+				// 		CategoryIndex: true,
+				// 		SearchByTerm: true,
+				// 	},
+				// },
 			},
 		} );
 

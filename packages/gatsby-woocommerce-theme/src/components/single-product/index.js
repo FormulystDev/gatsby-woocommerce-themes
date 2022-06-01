@@ -6,6 +6,8 @@ import { isEmpty } from "lodash";
 import SocialShareCard from "../social-share-card";
 import ProductCarousel from "../product-carousel";
 import { sanitize } from "../../utils/functions";
+// import ReviewStars from "../cs/review-stars";
+import "./style.scss";
 
 const productImagePlaceholder = "https://via.placeholder.com/434";
 
@@ -51,25 +53,35 @@ const SingleProduct = ( props ) => {
 	return (
 		// @TODO Need to handle Group products differently.
 		!isEmpty( product ) && "GroupProduct" !== product.nodeType ? (
-			<div className="single-product-page container py-5">
-				<div className="row">
-					<div className="col-lg-5 col-md-6 mb-5 product-image-wrap">
-						<div className="product-image">
-							{ displayProductImages() }
-						</div>
-					</div>
-					<div className="col-lg-7 col-md-6 mb-5">
-						<div className="single-product-desc">
-							<h3>{ product.name ? product.name : "" }</h3>
-							{ !isEmpty( product.description ) ? (
-								<p dangerouslySetInnerHTML={ { __html: sanitize( product.description ) } }/>
-							) : null }
-							<div className="single-product-add-to-cart">
-								<h6 className="card-subtitle mb-3">{ product.price }</h6>
-								<AddToCartButton product={ product }/>
+			<div className="cs-page-content-body">
+				<div className="product-details-page">
+					<div className="container-fluid cs-product-details">
+						<div className="row justify-content-between">
+							<div className="col-12 col-md-6 cs-product-gallery">
+								{ displayProductImages() }
 							</div>
-							<SocialShareCard title={ product.name } sectionTitle="Share this product"
-							                 link={ product.uri }/>
+
+							<div className="col-12 col-md-6 cs-product-overview product-new-overview">
+								<div className="overview">
+									{/* <ReviewStars /> */}
+									<div class="title">Moisturizers</div>
+
+									<div className="title-desc">{ product.name ? product.name : "" }</div>
+									
+									<div className="single-product-price">{ product.price }</div>
+
+									{ !isEmpty( product.description ) ? (
+										<div className="product-desc">
+											<p dangerouslySetInnerHTML={ { __html: sanitize( product.description ) } }/>
+										</div>
+									) : null }
+									<div className="add-cart d-flex button-change">
+										<AddToCartButton product={ product }/>
+									</div>
+									<SocialShareCard title={ product.name } sectionTitle="Share this product"
+													link={ product.uri }/>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

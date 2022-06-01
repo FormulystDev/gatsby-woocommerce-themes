@@ -71,15 +71,15 @@ const AddToCart = (props) => {
   };
 
   return (
-    <div>
+    <>
       {/*	Check if its an external product then put its external buy link */}
       {"ExternalProduct" === product.nodeType ? (
         <a href={product.externalUrl} target="_blank">
           <button className="btn btn-outline-dark">Buy Now</button>
         </a>
       ) : (
-        <button onClick={handleAddToCartClick} className="btn btn-outline-dark">
-          Add to cart
+        <button onClick={handleAddToCartClick} className="btn btn-lg">
+          Add to cart - { product.price }
         </button>
       )}
       {showViewCart ? (
@@ -99,7 +99,7 @@ const AddToCart = (props) => {
           Adding to Cart...
         </p>
       )}
-    </div>
+    </>
   );
 };
 

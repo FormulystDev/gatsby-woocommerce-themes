@@ -1,0 +1,168 @@
+@import "../../../sass/essentials";
+
+.home-page {
+    .cs-section-overview {
+        margin-bottom: 40px;
+        @include mq($until: medium) {
+            padding: 0;
+            .d-flex {
+                .cs-content {
+                    font-size: 28px;
+                    line-height: 1.07;
+                    letter-spacing: -.7px
+                }
+            }
+        }
+        .cs-section {
+            .img-gallery {
+                background-color: #f4f4f2;
+                @include mq($until: medium) {
+                    background-color: transparent;
+                }
+                .img {
+                    text-align: center;
+                    padding: 50px 90px 170px;
+                    @include mq($until: medium) {
+                        padding: 0;
+                    }
+                }
+            }
+            .cs-section-content {
+                padding: 50px 80px 50px 50px;
+                @include mq($until: medium) {
+                    padding: 0 15px;
+                    margin-bottom: 40px
+                }
+                .d-flex {
+                    .cs-head {
+                        font-size: 10px;
+                        font-weight: 700;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: 2px;
+                        text-align: center;
+                        color: #000;
+                        text-transform: uppercase;
+                        margin: 20px auto 30px;
+                        @include mq($until: medium) {
+                            margin-top: 0;
+                        }
+                    }
+                    .cs-content {
+                        font-family: "Playfair Display";
+                        font-size: 48px;
+                        font-weight: 400;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.08;
+                        letter-spacing: -1.2px;
+                        text-align: center;
+                        color: #000;
+                        @include mq($until: medium) {
+                            font-size: 28px;
+                            line-height: 1.07;
+                            letter-spacing: -.7px;
+                        }
+                        span {
+                            font-style: italic
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-product-showcase {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f4f4f2;
+    text-align: center;
+    @include mq($until: medium) {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    img {
+        max-width: 620px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+.home-products-brief {
+    padding-bottom: 30px;
+    @include mq($until: medium) {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    h1 {
+        font-family: "Playfair Display";
+        font-size: 48px;
+        font-weight: 400;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.08;
+        letter-spacing: -1.2px;
+        text-align: center;
+        color: #000;
+        max-width: 620px;
+        
+        @include mq($until: medium) {
+            font-size: 28px;
+            line-height: 1.07;
+            letter-spacing: -.7px;
+        }
+        span {
+            font-style: italic;
+        }
+    }
+}
+
+.home-hero-cta {
+    text-align: center;
+    a {
+        @include mq($until: medium) {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;    
+        }
+    }
+}
+a {
+    &.global-orange-cta {
+        border-radius: 30px;
+        background-color: #fcc463;
+        color: #000;
+        padding: 14px 45px;
+        display: inline-block;
+        text-decoration: none;
+        border: solid 2px #fcc463;
+        transition: all ease 0.5s;
+        font-family: 'Playfair Display';
+        font-weight: 500;
+        &:hover {
+            background-color: #ffff;
+            color: #fcc463;
+        }
+    }
+}
+button {
+    &.global-orange-cta {
+        border-radius: 30px;
+        background-color: #fcc463;
+        color: #000;
+        padding: 14px 45px;
+        display: inline-block;
+        text-decoration: none;
+        border: solid 2px #fcc463;
+        transition: all ease 0.5s;
+        font-family: 'Playfair Display';
+        &:hover {
+            background-color: #ffff;
+            color: #fcc463;
+        }
+    }
+}

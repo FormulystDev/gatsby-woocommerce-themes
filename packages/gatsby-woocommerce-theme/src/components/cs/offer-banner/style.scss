@@ -1,0 +1,25 @@
+@import "../../../sass/essentials";
+
+.the-offer-banner {
+    padding: 40px 80px;
+    text-align: center;
+    background-color: #fcc463;
+}
+
+.the-offer-banner h2 {
+    font-family: "Playfair Display";
+    font-size: 48px;
+    line-height: 1.25;
+    letter-spacing: -1.2px;
+    font-style: italic;
+    color: #000;
+}
+
+@include mq($until: medium) {
+    .the-offer-banner {
+        padding: 20px;
+    }
+    .the-offer-banner h2 {
+        font-size: 28px;
+    }
+}

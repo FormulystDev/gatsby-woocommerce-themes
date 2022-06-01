@@ -1,3 +1,7 @@
 @function background_url( $image ) {
 	@return url( '../../images/' + $image );
 }
+
+@function cs_background_url( $image ) {
+	@return url( '../../../images/' + $image );
+}
