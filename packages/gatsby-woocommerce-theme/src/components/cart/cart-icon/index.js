@@ -17,13 +17,25 @@ const CartIcon = () => {
 					<div className="woo-next-cart-wrap">
 						{ totalPrice ? <span className="woo-next-cart-price mr-2">{ totalPrice }</span> : '' }
 						<span className="woo-next-cart-icon-container">
+							{/* Rahul<span role="img" aria-label="cart-icon">🛒</span> */}
+							{ <div className="woo-next-cart-count">{ productsCount ?productsCount : 0 }</div> }
+						</span>
+					</div>
+			</button>
+			<CartDropDown isDropdownOpen={ isDropdownOpen }/>
+		</>
+		/*Rahul <>
+			<button className="woo-menu-cart-icon" onClick={ () => setIsDropdownOpen( ! isDropdownOpen ) }>
+					<div className="woo-next-cart-wrap">
+						{ totalPrice ? <span className="woo-next-cart-price mr-2">{ totalPrice }</span> : '' }
+						<span className="woo-next-cart-icon-container">
 							<span role="img" aria-label="cart-icon">🛒</span>
 							{ productsCount ? <span className="woo-next-cart-count">{ productsCount }</span> : '' }
 						</span>
 					</div>
 			</button>
 			<CartDropDown isDropdownOpen={ isDropdownOpen }/>
-		</>
+		</> */
 
 	)
 };

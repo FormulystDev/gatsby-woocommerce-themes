@@ -21,6 +21,12 @@ export default ( props ) => {
 		<StaticQuery
 			query={ graphql`
 				    query HeaderQuery {
+						concern: allWpProductCategory(filter: {children: {}, wpParent: {node: {name: {eq: "Concern"}}}}) {
+							nodes {
+								name
+								slug
+							}
+						}
 					  wp {
 					    header: getHeader {
 					      siteLogoUrl
@@ -45,6 +51,7 @@ export default ( props ) => {
 					            url
 					          }
 					        }
+							parentId
 					      }
 					    }
 					  }

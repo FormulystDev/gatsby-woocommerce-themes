@@ -18,6 +18,7 @@ query GET_PAGES {
       date
       uri
       slug
+      isFrontPage
       seo {
         ...SeoFragment
       }

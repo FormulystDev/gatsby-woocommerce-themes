@@ -3,6 +3,9 @@
 @import "./../../sass/vendor/hamburger/hamburgers.scss";
 
 .site-header-container {
+
+  font-family: AktivGrotesk;
+  font-weight: normal;
   padding-right: 5px;
 
 	&.container {
@@ -32,7 +35,10 @@
 .site-brand {
   display: flex;
   align-items: center;
-
+  padding: 30px 20px 30px 80px;
+  @include mq($until: medium) {
+    padding: 0 0 0 20px;
+  }
   .site-brand__content {
     width: 300px;
     margin-left: 10px;
@@ -47,8 +53,10 @@
 	}
 
   .site-brand__logo {
+    max-width: 117px;
+    max-height: 60px;
     @include mq($until: small) {
-      width: 50px;
+      max-width: 80px;
     }
   }
 }
@@ -100,10 +108,18 @@
   // Main menu list
   .header-nav__menu-item {
     padding: 28px 16px;
-    color: #757575;
+    color: #000;
     position: relative;
     border: 1px solid $color__border;
     transition: 0.3s;
+    font-size: 11px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 2.5px;
+    text-align: center;
+    cursor: pointer;
 
     @include mq($until: large) {
       padding: 8px 16px;
@@ -142,13 +158,17 @@
     }
 
     &:last-child {
+      font-family: "Playfair Display";
+      font-size: 14px;
+      letter-spacing: 1px;
       border: 2px solid $color__menu-border;
+      padding: 12px 20px;
+      background-color: #fcc463;
       border-radius: 45px;
-      width: 100px;
+      width: auto;
       text-align: center;
       vertical-align: middle;
       margin: 16px 0 0 16px;
-      padding: 4px 16px;
 
       @include mq(large) {
         margin: 0;
@@ -156,14 +176,15 @@
       }
 
 	    &:hover {
-		    background-color: #343a40;
-		    border-color: #343a40;
+		    background-color: $white;
+		    border-color: #fcc463;
 		    a {
-			    color: $white;
+			    color: $black;
 		    }
 	    }
 
       a {
+        text-transform: capitalize;
         padding: 4px 0;
         display: flex;
         justify-content: center;
@@ -180,10 +201,14 @@
     // Main Menu link
     .header-nav__menu-link {
       display: flex;
+      text-transform: uppercase;
       padding: 10px;
       white-space: nowrap;
-      color: #757575;
+      color: #000;
 
+      &:hover {
+        color: #fcc463;
+      }
       @include mq(large) {
         display: inline-block;
         padding: 0;
@@ -198,7 +223,7 @@
 		      margin: auto;
 		      height: 1px;
 		      transform: scaleX(0);
-		      background-color: #757575;
+		      background-color: #000;
 		      transition: transform 0.3s;
 	      }
 
@@ -284,6 +309,10 @@
 .cart-icon-wrap {
 	display: flex;
 	align-items: center;
+  padding: 30px 80px 30px 20px;
+  @include mq($until: medium) {
+    padding: 0 20px 0 0;
+  }
 }
 
 .wishlist-menu {
@@ -303,4 +332,68 @@
 	border-radius: 50%;
 	background-color: #868484;
 	position: absolute;
+}
+
+
+/* Rahul Add from WordPress Styling */
+
+
+  .alert{
+    &.cs-toast {
+      max-width: 100%;
+      position: fixed;
+      width: 100%;
+      background-color: #fcc463;
+      border: none;
+      box-shadow: none;
+      z-index: 1051;
+      .toast-body {
+        padding: 0;
+        .message {
+          font-family: "Aktiv Grotesk", sans-serif;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.71;
+          letter-spacing: normal;
+          text-align: center;
+          color: #000;
+          span {
+            font-weight: 400
+          }
+        }
+      }
+    }
+  }
+
+  .container-fluid {
+    &.cs-header {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  @include mq($from: medium) {
+    .container-fluid {
+      &.cs-header {
+        &.site-header-container {
+          padding-top: 42px;
+        }
+      }
+    }
+  }
+  
+  @include mq($until: medium) {
+    .container-fluid {
+      &.cs-header {
+        &.site-header-container {
+          padding-top: 42px;
+        }
+      }
+    }
+  }
+
+  .cs-header.container-fluid .navbar-cs .navbar-collapse .navbar-nav li .nav-notify-link .link-text, .cs-header.container-lg .navbar-cs .navbar-collapse .navbar-nav li .nav-notify-link .link-text, .cs-header.container-md .navbar-cs .navbar-collapse .navbar-nav li .nav-notify-link .link-text, .cs-header.container-sm .navbar-cs .navbar-collapse .navbar-nav li .nav-notify-link .link-text, .cs-header.container-xl .navbar-cs .navbar-collapse .navbar-nav li .nav-notify-link .link-text {
+    font-family: AktivGrotesk;
+    font-size: 14px;
+    letter-spacing: normal;
 }

@@ -25,7 +25,7 @@
   font-size: 20px;
 }
 
-.woo-next-cart-count {
+/* Rahul .woo-next-cart-count {
   top: -13px;
   left: 12px;
   padding-left: 5px;
@@ -37,6 +37,31 @@
   border-radius: 50%;
   background-color: #868484;
   position: absolute;
+} */
+.woo-next-cart-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 16px;
+  color: #000;
+  min-height: 16px;
+  width: 40px;
+  height: 40px;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  line-height: normal;
+  font-weight: 500;
+  border-radius: 50%;
+  background-color: #fcc463;
+  border: solid 1px #fcc463;
+}
+
+.woo-next-cart-count:hover {
+  border: 2px solid #fcc463;
+  background-color: #fff;
 }
 
 .woo-next-view-cart-btn {

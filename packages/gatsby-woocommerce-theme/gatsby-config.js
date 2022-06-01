@@ -32,7 +32,7 @@ module.exports = ({ wordPressUrl, gatsbySiteUrl, googleTagManagerId, fbAppId }) 
         schema: {
           perPage: 20,
           timeout: 300000,
-          requestConcurrency: 5, // currently set to undefined
+          requestConcurrency: 4, // currently set to undefined
           previewRequestConcurrency: 2, // currently set to undefined
         },
         url: `${wordPressUrl}/graphql`,

@@ -4,22 +4,29 @@ html {
 	-webkit-text-size-adjust: 100%;
 	color: $black;
 	overflow-x: hidden;
+    font-family: "Aktiv Grotesk", sans-serif;
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
 	-webkit-font-smoothing: antialiased;
 	scroll-behavior: smooth;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block
 }
 
 /* stylelint-disable */
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+    box-sizing: border-box;
 }
 /* stylelint-enable */
 
 body {
 	@include body-text( body );
 	background-color: $color__body;
-	font-family: $font__primary;
+	font-family: "Activ Grotesk";
 	margin: 0;
 }
 

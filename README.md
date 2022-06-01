@@ -1,233 +1,101 @@
-## 🎨 [Gatsby theme](https://gatsby-woocommerce-themes-flame.vercel.app/) inspired by [Gatsby WooCommerce themes - Electra](https://gatsby-woocommerce-theme.netlify.app/)
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby minimal starter
+</h1>
 
-- A Gatsby theme for WooCommerce, using Decoupled Architecture
-- Front end in React
-- Backend in WordPress.
+## 🚀 Quick start
 
-[Demo Site](https://gatsby-woocommerce-theme.netlify.app/)
+1.  **Create a Gatsby site.**
 
-This theme uses `gatsby-source-wordpress@v4 BETA`
+    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-*** 👨‍💻 Please star my repo to support my work 🙏 ***
+    ```shell
+    # create a new Gatsby site using the minimal starter
+    npm init gatsby
+    ```
 
-<a href="https://youtu.be/ygaE8ZdPEX8" target="_blank">
-<img src="https://codeytek.com/wp-content/uploads/2020/09/Screenshot-2020-09-09-at-11.05.27-PM.png" alt="gatsby woocommerce theme electra hero image" />
-</a>
+2.  **Start developing.**
 
-## 🔥 Features
-1. Uses React with Gatsby ( Blazing Fast )
-2. PWA ( Works Offline )
-3. Image Optimization ( blur effect )
-4. GraphQL ( with wp-graphql on WordPress )
-5. Custom Widgets, Menus, Social elements.
-6. WooCommerce store
-7. Google Analytics feature
-8. Yoast SEO supported ( with og tags )
-9.  Product Search with pagination ( even works offline ) 
-10. Product pagination
-11. Archive pages.
-12. Authentication with JWT
-13. My Account page ( with Login and Registration )
-14. Create an account on checkout.
-15. Social share.
-16. Product Carousel.
-17. Add to wishlist( even works offline )
+    Navigate into your new site’s directory and start it up.
 
-## 👨‍💻 Maintainer
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
 
-| Name                                                   | Github Username |
-|--------------------------------------------------------|-----------------|
-| [Rahul Dhangar](mailto:rahuldhangar@gmail.com)       |  @rahuldhangar   |
+3.  **Open the code and start customizing!**
 
-### Home Page demo
-![](demos/home-page.gif)
+    Your site is now running at http://localhost:8000!
 
-### Search, Archive, Pagination.
-![](demos/search-archive-pagination.gif)
+    Edit `src/pages/index.js` to see your site update in real-time!
 
-### Single product page with carousel, social share, image zoom
-![](demos/search-archive-pagination.gif)
+4.  **Learn more**
 
-### Add to Cart, Cart page, Checkout.
-![](demos/add-to-cart-cart-page-checkout.gif)
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-### My account: Register
-![](demos/register.gif)
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-### My account: Login
-![](demos/login.gif)
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-## 🚀 Set Up
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-* Fork/clone the repo
-* yarn install
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-### Gatsby Setup ( when using this repo as your project)
-1. Server Side Enviromnent Variables.
-Create a file called `.env` taking example from `.env-example` and add the following into `site` directory :
- 
-- `WORDPRESS_SITE_URL=https://example.com`
-- `GATSBY_SITE_URL=https://example.com`
-- `GOOGLE_TAGMANAGER_ID=xxx`
-- `FB_APP_ID=xxx`
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-2. Client Side Environment Variables.
-Create two more files called `.env.development` `.env.production` and into 'site' directory and add your WordPress site url liks so.
+## 🚀 Quick start (Gatsby Cloud)
 
-```shell script
-GATSBY_WORDPRESS_SITE_URL=https://example.com
-``` 
+Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-Env variables from these file will be consumed by Apollo client on client side.
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
 
-### WordPress Setup
-1. On your WordPress site, download, Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
+## Required WordPress Plugins:
 
-a. [Headless CMS](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/headless-cms.zip)
+- WP Gatsby
+- WP GraphQL
+- WPGraphQL JWT Authentication [[link](https://github.com/wp-graphql/wp-graphql-jwt-authentication)]
+- WPGraphQL WooCommerce (WooGraphQL) [[link](https://github.com/wp-graphql/wp-graphql-woocommerce)]
 
-b. [woocommerce](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/woocommerce.4.4.1.zip)
+## Built using:
 
-c. [wp-graphql](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql.zip) - tested on ( v1.0.0 )
+- nvm list    :	16.15.0
+- npm -v			:	8.5.5
+- node -v			:	16.15.0
+- yarn -v			:	1.22.18
+- gatsby -v		:	4.15.0
+- npx gatsby new    :	2.15.0
+- composer -v : 2.3.5
 
-d. [wp-graphql-woocommerce](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-woocommerce.zip)
+## Useful resource links for Gatsby plugins used
 
-e. [wp-gatsby](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-gatsby.zip)
-
-f. [Yoast-SEO](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wordpress-seo.14.5.zip)
-
-g. [wp-graphql-yoast-seo](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-yoast-seo.zip)
-
-h. [wp-graphql-jwt-authentication](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-jwt-authentication.zip)
-
-* You can follow the readme to setup [https://github.com/wp-graphql/wp-graphql-jwt-authentication#install-activate--setup](https://github.com/wp-graphql/wp-graphql-jwt-authentication#install-activate--setup)
-
-
-2. - Set Header menu as `HCMS Header Menu`
-   
-   ![](demos/header-menu-demo.png)
-   
-   - Set Footer menu as `HCMS Footer Menu`
-   ![](demos/footer-menu-demo.png)
-   
-3. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
-4. Create a Home Page ( if there isn't one already )and make sure you have a home page and Location rule is set to Home page.
-5. If isn't already set your site title, description and logo from WordPress customizer.
-6. Setup WooCommerce:
-* Make sure WooCommerce Plugin is active in WordPress and the payment modes have been set from its settings.
-* You can also import default wooCommerce products that come with wooCommerce Plugin for development ( if you don't have any products in your WordPress install ) `WP Dashboard > Tools > Import > WooCommerce products(CSV)`: The WooCommerce default products csv file is available at wp-content/plugins/woocommerce/sample-data/sample_products.csv
-
-7. For home page carousel please upload same size product category images of dimensions `1900x600` 
-
-## 🚀 Development
-
-* Navigate into site’s directory.
-
-```shell
-yarn install      # Run this for the first time.
-npm run dev      # During development.
-npm run build    # When ready for production.
-```
-
-** For development **
-Your site is now running at `http://localhost:8000`!
-
-_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data.
-
-### :package: Adding/Removing a new package to site folder
-
-`yarn workspace site add package-name`
-`yarn workspace site remove package-name`
-
-### :package: Adding/Removing a new package to gatsby-wooocommerce-theme folder
-
-`yarn workspace gatsby-wooocommerce-theme add package-name`
-`yarn workspace gatsby-wooocommerce-theme remove package-name`
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── demos
-    ├── packages
-    ├── src
-    ├── .gitignore
-    ├── .site
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-### Useful Links ###
-1. [Setting workspaces with yarn](https://www.gatsbyjs.org/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) for theme development
-2. [Installing a gatsby theme](https://www.gatsbyjs.org/docs/themes/using-a-gatsby-theme/) and setting it up.
-
-### Deployment
-#### [With vercel](https://gatsby-woocommerce-themes.vercel.app/)
-
-- Signup on [vercel.com](https://vercel.com/)
-- Click on Import Project and then add the configurations.
-![](demos/build-commands.png)
-
-- On [vercel](https://vercel.com/), make sure you add these evn vars from settings of the project:
-![](demos/env-vars.png)
-
-
-#### From CLI:
-- `npm i -g vercel`
-- Now in the project root run
-`vercel`
-
-- Add the following configurations
-* build command: `npm run build`
-* output directory: `site/public`
-* development command: `npm run dev` 
-* root directory: `/`
-
-### Using as theme ( for existing gatsby project )
-[https://www.npmjs.com/package/gatsby-woocommerce-theme](https://www.npmjs.com/package/gatsby-woocommerce-theme)
-Follow its readme on npm.js
-
-## Helpful Tools:
-1. [Apollo Client Developer Tools Chrome Extension](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm/related)
-
-## Tested on versions:
-nvm list			:	14.19.1
-npm -v			:	6.14.16
-node -v			:	14.19.1
-yarn -v			:	1.2.18
+- gatsby-source-wordpress : [[Docs](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress#docs-)] [[Plugin Options](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/docs/plugin-options.md#url-string)]
 
 ### Note:
-Don't forget to add .env file vars as per .env.example
+- __Don't forget to add .env file vars as per .env.example__
 
+#### Add these content to the HCMS Footer #1:
+```html
+<form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-196" method="post" data-id="196" data-name="News Letter">
+<div class="mc4wp-form-fields">
+<div class="input-group cs-in-gp">
+  <input type="email" name="EMAIL" class="form-control cs-form-control" required="" placeholder="Your email" aria-label="Your email" aria-describedby="signup-newsletter"><p></p>
+<div class="input-group-append">
+    <input name="INTERESTS[aae379b25c][]" type="hidden" value="ec56e24afa"><br>
+    <input type="submit" class="btn" value="" id="signup-newsletter">
+  </div>
+</div>
+</div>
+<p><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1654020685"><input type="hidden" name="_mc4wp_form_id" value="196"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"></p>
+<div class="mc4wp-response"></div>
+</form>
+```
 
-## Thank You
-[Imran H Sayed](https://github.com/imranhsayed) for generously releasing Electra theme and allowing the devs to use it on their projects.
+#### Add these content to the HCMS Footer #2:
+```html
+<p><a href="https://www.instagram.com/carrotandstickofficial/" class="list-group-item list-group-item-action">Instagram</a></p>
+<p><a href="https://www.facebook.com/CarrotAndStickSkinCare/" class="list-group-item list-group-item-action">Facebook</a></p>
+```

@@ -1,4 +1,5 @@
 // mq breakpoints.
+// @include mq($from: medium, $until: large), @include mq(large), @include mq($until: large)
 $mq-breakpoints: (
 	small: 600px,
 	medium: 768px,

@@ -7,19 +7,19 @@ export default {
 				"sidebarTwo": "",
 				"socialLinks": [
 					{
-						"iconUrl": "https://www.facebook.com/codeytek",
+						"iconUrl": "https://www.facebook.com/formulyst",
 						"iconName": "facebook"
 					},
 					{
-						"iconUrl": "https://twitter.com/codeytek",
+						"iconUrl": "https://twitter.com/formulyst",
 						"iconName": "twitter"
 					},
 					{
-						"iconUrl": "https://instagram.com/codeytek",
+						"iconUrl": "https://instagram.com/formulyst",
 						"iconName": "instagram"
 					},
 					{
-						"iconUrl": "https://youtube.com/ImranSayedDev",
+						"iconUrl": "https://youtube.com/uplers",
 						"iconName": "youtube"
 					}
 				]

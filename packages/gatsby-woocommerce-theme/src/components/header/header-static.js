@@ -11,39 +11,48 @@ import defaultSiteLogoUrl from "../../images/logo.png";
 
 const Header = ({ data }) => {
   const {
+    concern,
     wp: {
-      header: { siteTitle, siteTagLine, siteLogoUrl },
+      header: { siteLogoUrl },
     },
     headerMenuItems,
   } = data;
+  // console.log(headerMenuItems);
   const siteLogoURL = siteLogoUrl ? siteLogoUrl : defaultSiteLogoUrl;
-
+  const toastMessage = `Free shipping over $79  &nbsp; &nbsp;|&nbsp;&nbsp;  15% OFF. Code: welcome`;
   return (
-    <header className="site-header-container container">
-      <div className="site-header">
-        <div className="site-brand">
-          <Link to="/">
-	          <figure>
-		          <img
-			          className="site-brand__logo"
-			          src={siteLogoURL}
-			          width="68"
-			          height="55"
-			          alt="header logo"
-		          />
-	          </figure>
-          </Link>
-          <div className="site-brand__content">
-            <h2 className="screen-reader-text site-brand__title">
-              {siteTitle}
-            </h2>
-            <p className="site-brand__description">{siteTagLine}</p>
+    <>
+      <div className="alert cs-toast" id="alert-toast">
+          <div className="toast-body">
+            <div className="message" id="toast-message" dangerouslySetInnerHTML={ { __html: sanitize( toastMessage ) } } />
           </div>
-        </div>
-
-        <Nav headerMenuItems={headerMenuItems} />
       </div>
-    </header>
+      <header className="site-header-container container-fluid cs-header">
+        <div className="site-header">
+          <div className="site-brand">
+            <Link to="/">
+              <figure>
+                <img
+                  className="site-brand__logo"
+                  src={siteLogoURL}
+                  width="117"
+                  height="60"
+                  alt="header logo"
+                />
+              </figure>
+            </Link>
+            {/* Rahul<div className="site-brand__content">
+              <h2 className="screen-reader-text site-brand__title">
+                {siteTitle}
+              </h2>
+              <p className="site-brand__description">{siteTagLine}</p>
+            </div> */}
+          </div>
+
+          <Nav headerMenuItems={headerMenuItems} concern={concern} />
+        </div>
+      </header>
+    </>
   );
 };
 
