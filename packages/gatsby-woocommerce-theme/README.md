@@ -100,6 +100,8 @@ g. [wp-graphql-yoast-seo](https://github.com/FormulystDev/gatsby-woocommerce-the
 
 h. [wp-graphql-jwt-authentication](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-jwt-authentication.zip)
 
+i. [wp-graphql-acf](https://github.com/FormulystDev/gatsby-woocommerce-themes/blob/master/wordpress/plugins/wp-graphql-acf-0.5.3.zip)
+
 * You can follow the readme to setup [https://github.com/wp-graphql/wp-graphql-jwt-authentication#install-activate--setup](https://github.com/wp-graphql/wp-graphql-jwt-authentication#install-activate--setup)
 
 
