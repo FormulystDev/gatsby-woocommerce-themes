@@ -25,10 +25,7 @@ const relatedProduct = ({ product }) => {
         bestFor += `<li>${val.name}</li>`;
     });
     return (
-        <>
-            {console.log(bestFor)}
-            {console.log(product.additionalInformation.bestFor)}
-            
+        <>            
             <div className="new-product-col-outr">
                 <div className="new-product-col new-badge">
                     <div class="new-badge-box">{ badge }</div>

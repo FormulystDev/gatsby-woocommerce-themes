@@ -67,8 +67,6 @@ let badge = "Best Seller";
 
 
 const CSRelatedProducts = ({ relatedProducts }) => {
-    // console.warn(`related-products - props`);
-    console.log(relatedProducts.node);
     return (
         <div className="container-fluid cs-related-products">
             <div className="d-flex flex-wrap justify-content-between align-items-end cs-header">

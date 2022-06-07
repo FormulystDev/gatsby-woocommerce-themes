@@ -17,7 +17,6 @@ const Header = ({ data }) => {
     },
     headerMenuItems,
   } = data;
-  // console.log(headerMenuItems);
   const siteLogoURL = siteLogoUrl ? siteLogoUrl : defaultSiteLogoUrl;
   const toastMessage = `Free shipping over $79  &nbsp; &nbsp;|&nbsp;&nbsp;  15% OFF. Code: welcome`;
   return (
