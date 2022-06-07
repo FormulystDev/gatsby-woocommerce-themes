@@ -7,6 +7,11 @@ fragment ProductsFragment on WpProduct {
         nodeType
         link
         description
+        additionalInformation {
+          bestFor {
+            name
+          }
+        }
         galleryImages {
           nodes {
             id
@@ -16,8 +21,8 @@ fragment ProductsFragment on WpProduct {
           }
         }
         image {
-		  ...ImageFragment
-		}
+          ...ImageFragment
+        }
         productCategories {
           nodes {
             id

@@ -36,11 +36,20 @@ query GET_FRONT_PAGE {
       }
     }
   }
+  csRelatedProducts: allWpProduct(limit: 3, filter: {databaseId: {in: [22, 20, 14, 111]}}, sort: {order: DESC, fields: date},) {
+	  edges {
+		  node {
+			  ...ProductsFragment
+			  seo {
+				  ...SeoFragment
+			  }
+		  }
+	  }
+  }
 }
 ${ ProductsFragment }
 ${ SeoFragment }
 `;
-// products: allWpProduct(limit: 3, filter: {id: {in: ["22", "20", "14", "111"]}}, sort: {order: DESC, fields: date},)
 module.exports = async ( { actions, graphql } ) => {
 
 	const { createPage } = actions;
@@ -51,7 +60,8 @@ module.exports = async ( { actions, graphql } ) => {
 		return await graphql( GET_FRONT_PAGE )
 			.then( ( { data } ) => {
 
-				const { products, categories, page } = data;
+				// Rahul const { products, categories, page } = data;
+				const { page, categories, products, csRelatedProducts } = data;
 
 				let allTheProducts = [];
 				products.edges && products.edges.map( product => {
@@ -68,14 +78,31 @@ module.exports = async ( { actions, graphql } ) => {
 
 				} );
 
-				return {  page: page, categories: categories, allProducts: allTheProducts };
+				let allTheRelatedProducts = [];
+				csRelatedProducts.edges && csRelatedProducts.edges.map( product => {
+
+					// Push the categories data in form of an array, to make it searchable
+					let productsData = product.node;
+					productsData.categoriesData = [];
+
+					productsData.productCategories.nodes.map( categoryItem => {
+						productsData.categoriesData.push( categoryItem.name );
+					} );
+
+					allTheRelatedProducts.push( productsData );
+
+				} );
+
+				// Rahul return {  page: page, categories: categories, allProducts: allTheProducts };
+				return {  page: page, categories: categories, allProducts: allTheProducts, csRelatedProducts: allTheRelatedProducts };
 			} );
 
 
 	};
 
 	// When the above fetchPosts is resolved, then create page and pass the data as pageContext to the page template.
-	await fetchPosts().then( ( { page, categories, allProducts } ) => {
+	// Rahul await fetchPosts().then( ( { page, categories, allProducts } ) => {
+	await fetchPosts().then( ( { page, categories, allProducts, csRelatedProducts } ) => {
 
 		createPage( {
 			path: `/`,
@@ -83,8 +110,8 @@ module.exports = async ( { actions, graphql } ) => {
 			context: {
 				page,
 				categories,
-				allProducts,
-				categoryName: 'all',
+				csRelatedProducts,
+				// Rahul categoryName: 'all',
 				// postSearchData: {
 				// 	products: allProducts,
 				// 	options: {

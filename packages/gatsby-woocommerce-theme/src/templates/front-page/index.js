@@ -16,10 +16,11 @@ const FrontPage = ( props ) => {
 
 	const {
 		      pageContext: {
-			      page: { title, seo, uri },
-			      categories,
-			      categoryName,
-				//postSearchData: { products, options }
+				page: { title, seo, uri },
+				csRelatedProducts,
+			    // Rahul categories,
+			    // categoryName,
+				// postSearchData: { products, options }
 		      }
 	      } = props;
 
@@ -37,7 +38,8 @@ const FrontPage = ( props ) => {
 						/>
 						{/* Rahul<Carousel categories={ categories }/> */}
 						<CSSectionOverview />
-						<CSRelatedProducts />
+						<CSRelatedProducts
+							relatedProducts={ csRelatedProducts } />
 						<CSOfferBanner />
 						<CSStoryTime />
 						<CSConcerns />
