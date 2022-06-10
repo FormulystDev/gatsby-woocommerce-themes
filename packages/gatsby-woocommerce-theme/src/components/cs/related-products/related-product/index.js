@@ -28,8 +28,8 @@ const relatedProduct = ({ product }) => {
         <>            
             <div className="new-product-col-outr">
                 <div className="new-product-col new-badge">
-                    <div class="new-badge-box">{ badge }</div>
-                    <div class="new-product-image">
+                    <div className="new-badge-box">{ badge }</div>
+                    <div className="new-product-image">
                         <Link to={ product.link }>
                             <LazyLoadImage src={imgSrcUrl} />
                         </Link>

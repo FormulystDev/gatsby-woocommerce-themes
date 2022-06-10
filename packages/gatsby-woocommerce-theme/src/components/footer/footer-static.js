@@ -58,7 +58,7 @@ const Footer = ( { data } ) => {
 								</div>
 							</div>
 							<div className="flex-fill cs-link-list cs-center">
-								<div class="cs-list-head">Information</div>
+								<div className="cs-list-head">Information</div>
 								{ footerMenuItems.edges.length ? (
 									<div className="list-group">
 										<ul>
@@ -79,17 +79,17 @@ const Footer = ( { data } ) => {
 								) }
 							</div>
 							<div className="flex-fill cs-link-list">
-								<div class="cs-list-head">Social</div>
+								<div className="cs-list-head">Social</div>
 									{ sidebarTwo ? (
 										<div
 											dangerouslySetInnerHTML={ { __html: sanitize( sidebarTwo ) } }
 											className="list-group"
 										/>
-									) : <div class="list-group">
-											<a href="https://www.instagram.com/carrotandstickofficial/" class="list-group-item list-group-item-action">
+									) : <div className="list-group">
+											<a href="https://www.instagram.com/carrotandstickofficial/" className="list-group-item list-group-item-action">
 												Instagram
 											</a>
-											<a href="https://www.facebook.com/CarrotAndStickSkinCare/" class="list-group-item list-group-item-action">
+											<a href="https://www.facebook.com/CarrotAndStickSkinCare/" className="list-group-item list-group-item-action">
 												Facebook
 											</a>
 										</div>
@@ -98,19 +98,19 @@ const Footer = ( { data } ) => {
 						</div>
 					</div>
 					<div className="card-footer">
-						<div class="cs-hr"></div>
-						<div class="contact-details d-flex flex-column flex-md-row justify-content-md-center">
-							<div class="country-detail d-flex flex-column flex-wrap flex-md-row align-items-center">
-								<div class="heading">Uk</div>
-								<div class="heading hyphen">—</div>
-								<div class="content">180 Piccadilly, W1J 9HF, London</div>
-								<div class="content"> —  +44 808 169 7701</div>
+						<div className="cs-hr"></div>
+						<div className="contact-details d-flex flex-column flex-md-row justify-content-md-center">
+							<div className="country-detail d-flex flex-column flex-wrap flex-md-row align-items-center">
+								<div className="heading">Uk</div>
+								<div className="heading hyphen">—</div>
+								<div className="content">180 Piccadilly, W1J 9HF, London</div>
+								<div className="content"> —  +44 808 169 7701</div>
 							</div>
-							<div class="country-detail d-flex flex-column flex-wrap flex-md-row align-items-center">
-								<div class="heading">US</div>
-								<div class="heading hyphen">—</div>
-								<div class="content">L15, 3 Columbus Circle, NY, NY 10019 </div>
-								<div class="content"> —  +1 (888) 258-9952</div>
+							<div className="country-detail d-flex flex-column flex-wrap flex-md-row align-items-center">
+								<div className="heading">US</div>
+								<div className="heading hyphen">—</div>
+								<div className="content">L15, 3 Columbus Circle, NY, NY 10019 </div>
+								<div className="content"> —  +1 (888) 258-9952</div>
 							</div>
 						</div>
 					</div>

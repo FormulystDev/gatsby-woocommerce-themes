@@ -64,7 +64,7 @@ const SingleProduct = ( props ) => {
 							<div className="col-12 col-md-6 cs-product-overview product-new-overview">
 								<div className="overview">
 									{/* <ReviewStars /> */}
-									<div class="title">Moisturizers</div>
+									<div className="title">Moisturizers</div>
 
 									<div className="title-desc">{ product.name ? product.name : "" }</div>
 									

@@ -20,7 +20,7 @@ const CSStoryTime = () => {
                         <div className="overview">
                             CARROT & STICK WILL NEVER COMPROMISE YOUR BEAUTY OR YOUR VALUES.
                         </div>
-                        <div class="story-btn d-flex">
+                        <div className="story-btn d-flex">
                             <Link to="/about" className="btn btn-lg d-flex justify-content-between" role="button" aria-pressed="true">
                                 <span className="d-none d-md-block">Read about our tough love approach</span>
                                 <span className="d-block d-md-none">Read more</span>
