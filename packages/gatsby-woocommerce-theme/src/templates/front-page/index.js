@@ -17,6 +17,7 @@ const FrontPage = ( props ) => {
 	const {
 		      pageContext: {
 				page: { title, seo, uri },
+				concern,
 				csRelatedProducts,
 			    // Rahul categories,
 			    // categoryName,
@@ -39,10 +40,13 @@ const FrontPage = ( props ) => {
 						{/* Rahul<Carousel categories={ categories }/> */}
 						<CSSectionOverview />
 						<CSRelatedProducts
-							relatedProducts={ csRelatedProducts } />
+							relatedProducts={ csRelatedProducts }
+						/>
 						<CSOfferBanner />
 						<CSStoryTime />
-						<CSConcerns />
+						<CSConcerns 
+							concern = { concern }
+						/>
 						<CSProductBundles />
 						{/* Rahul<Search
 							products={ products }

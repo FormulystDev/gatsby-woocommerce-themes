@@ -26,6 +26,13 @@ query GET_FRONT_PAGE {
       }
     }
   }
+  concern: allWpProductCategory(filter: {wpParent: {node: {name: {eq: "Concern"}}}}) {
+	nodes {
+		name
+		slug
+		count
+	}
+  }
   products: allWpProduct(limit: 500, sort: {order: DESC, fields: date},) {
     edges {
       node {
@@ -61,7 +68,7 @@ module.exports = async ( { actions, graphql } ) => {
 			.then( ( { data } ) => {
 
 				// Rahul const { products, categories, page } = data;
-				const { page, categories, products, csRelatedProducts } = data;
+				const { page, categories, concern, products, csRelatedProducts } = data;
 
 				let allTheProducts = [];
 				products.edges && products.edges.map( product => {
@@ -94,7 +101,7 @@ module.exports = async ( { actions, graphql } ) => {
 				} );
 
 				// Rahul return {  page: page, categories: categories, allProducts: allTheProducts };
-				return {  page: page, categories: categories, allProducts: allTheProducts, csRelatedProducts: allTheRelatedProducts };
+				return {  page: page, categories: categories, concern: concern, allProducts: allTheProducts, csRelatedProducts: allTheRelatedProducts };
 			} );
 
 
@@ -102,7 +109,7 @@ module.exports = async ( { actions, graphql } ) => {
 
 	// When the above fetchPosts is resolved, then create page and pass the data as pageContext to the page template.
 	// Rahul await fetchPosts().then( ( { page, categories, allProducts } ) => {
-	await fetchPosts().then( ( { page, categories, allProducts, csRelatedProducts } ) => {
+	await fetchPosts().then( ( { page, categories, concern, allProducts, csRelatedProducts } ) => {
 
 		createPage( {
 			path: `/`,
@@ -110,6 +117,7 @@ module.exports = async ( { actions, graphql } ) => {
 			context: {
 				page,
 				categories,
+				concern,
 				csRelatedProducts,
 				// Rahul categoryName: 'all',
 				// postSearchData: {

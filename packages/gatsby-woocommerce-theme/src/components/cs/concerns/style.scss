@@ -1,0 +1,32 @@
+.cs-skin-concerns {
+    padding: 30px 80px;
+    .title {
+        font-size: 10px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #000;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .concerns-list {
+        width: 100%;
+        list-style: none;
+        .concern-link {
+            padding: 20px 25px;
+            span {
+                font-family: "Playfair Display";
+                font-size: 36px;
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.67;
+                letter-spacing: -.9px;
+                color: #000;
+            }
+        }
+    }
+}

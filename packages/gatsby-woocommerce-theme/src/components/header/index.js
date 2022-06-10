@@ -21,7 +21,7 @@ export default ( props ) => {
 		<StaticQuery
 			query={ graphql`
 				    query HeaderQuery {
-						concern: allWpProductCategory(filter: {children: {}, wpParent: {node: {name: {eq: "Concern"}}}}) {
+						concern: allWpProductCategory(filter: {wpParent: {node: {name: {eq: "Concern"}}}}) {
 							nodes {
 								name
 								slug
