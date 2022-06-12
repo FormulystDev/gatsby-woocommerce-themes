@@ -2,7 +2,7 @@ import React from "react";
 
 import "./style.scss";
 
-const CSConcerns = ( { concern } ) => {
+const CSSkinConcerns = ( { concern } ) => {
     const subCategories = concern.nodes;
     const concerns = [];
     subCategories.map( ( cat ) => {
@@ -34,4 +34,4 @@ const CSConcerns = ( { concern } ) => {
     )
 }
 
-export default CSConcerns;
+export default CSSkinConcerns;
