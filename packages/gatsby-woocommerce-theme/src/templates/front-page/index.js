@@ -4,7 +4,7 @@ import CSSectionOverview from "../../components/cs/section-overview";
 import CSRelatedProducts from "../../components/cs/related-products";
 import CSOfferBanner from "../../components/cs/offer-banner";
 import CSStoryTime from "../../components/cs/story-time";
-import CSConcerns from "../../components/cs/concerns";
+import CSSkinConcerns from "../../components/cs/skin-concerns";
 import CSProductBundles from "../../components/cs/product-bundles";
 import { isEmpty } from 'lodash';
 import Layout from "../../components/layout";
@@ -44,7 +44,7 @@ const FrontPage = ( props ) => {
 						/>
 						<CSOfferBanner />
 						<CSStoryTime />
-						<CSConcerns 
+						<CSSkinConcerns 
 							concern = { concern }
 						/>
 						<CSProductBundles />
