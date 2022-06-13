@@ -14,8 +14,6 @@ const CSSkinConcerns = ( { concern } ) => {
     });
     return (
         <div className="container-fluid cs-skin-concerns">
-            { console.log ( subCategories ) }
-            { console.log ( concerns ) }
             <div className="cs-container d-flex flex-column justify-content-center align-items-center">
                 <div className="title">
                     Skin concerns
