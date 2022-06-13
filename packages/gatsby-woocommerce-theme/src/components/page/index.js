@@ -1,9 +1,7 @@
 import React from "react";
 import { isEmpty } from "lodash";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./style.scss";
 import { sanitize } from "../../utils/functions";
-import Aside from "../aside";
 
 const Page = (props) => {
   const { data } = props;
@@ -25,37 +23,26 @@ const Page = (props) => {
   return (
     <>
       {!isEmpty(data) ? (
-        <div className="page-container container py-5">
-          {!isEmpty(data.title) ? <h2>{data.title}</h2> : null}
-          <div className="row">
-            <main className="page-content col-md-8">
-              {!isEmpty(data.featuredImage) ? (
-				<figure>
-					<LazyLoadImage
-						alt={
-							data.featuredImage.node.altText
-								? data.featuredImage.node.altText
-								: ""
-						}
-						height={imgWidth}
-						src={imgSrcUrl} // use normal <img> attributes as props
-						width={imgHeight}
-						effect="blur"
-					/>
-				</figure>
-              ) : null}
+        <div className="cs-page-content-body">
+        <article id={`post-${data.id}`} className="page type-page status-publish hentry">
+          {/* ${console.log(data)} */}
 
-              {!isEmpty(data.content) ? (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: sanitize( data.content ),
-                  }}
-                />
-              ) : null}
-            </main>
-			<Aside categories={ data.categoriesData }/>
+          {!isEmpty(data.title) ? (
+            <div className="container-fluid cs-page-head-text">
+              <div className="flex head">{data.title}</div>
+            </div>
+          ) : null}
+          <div className="container-fluid cs-page-content-text">
+            {!isEmpty(data.content) ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: sanitize( data.content ),
+                }}
+              />
+            ) : null}
           </div>
-        </div>
+        </article>
+      </div>
       ) : (
         "Loading..."
       )}

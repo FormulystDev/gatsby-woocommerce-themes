@@ -2,7 +2,9 @@
 const { slash } = require( `gatsby-core-utils` );
 const customTemplatesUris = [ '/'  ];
 const customTemplateSlugs = [ 'checkout', 'cart', 'my-account', 'products' ];
+const customStaticPages = [ 'privacy-policy', 'faq', 'terms' ];
 const singlePageTemplate = require.resolve(`../src/templates/page/index.js`);
+const singleCustomPageTemplate = require.resolve(`../src/templates/page/single-custom-page/index.js`);
 const myAccountPageTemplate = require.resolve(`../src/templates/my-account/index.js`);
 const { ImageFragment } = require('./fragements/image/index');
 const { SeoFragment } = require('./fragements/seo/index.js');
@@ -71,6 +73,17 @@ module.exports = async ( { actions, graphql } ) => {
 					path: `${ page.uri }`,
 					component: slash( singlePageTemplate ),
 					context: { ...page, categoriesData }, // pass single page data in context, so its available in the singlePageTemplate in props.pageContext.
+				} );
+
+			}
+
+			// If a static custom page, create the page.
+			if ( ! customTemplatesUris.includes( page.uri ) && customStaticPages.includes( page.slug )  ) {
+
+				createPage( {
+					path: `${ page.uri }`,
+					component: slash( singleCustomPageTemplate ),
+					context: { ...page, categoriesData }, // pass single page data in context, so its available in the singleCustomPageTemplate in props.pageContext.
 				} );
 
 			}
