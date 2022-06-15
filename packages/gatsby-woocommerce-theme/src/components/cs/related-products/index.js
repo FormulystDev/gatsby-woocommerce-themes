@@ -7,8 +7,8 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 // import { isEmpty } from "lodash";
 import "./style.scss";
 
-const productImagePlaceholder = "https://via.placeholder.com/434";
-let badge = "Best Seller";
+// const productImagePlaceholder = "https://via.placeholder.com/434";
+// let badge = "Best Seller";
 
 // const Product = (props) => {
 //   const { product } = props;

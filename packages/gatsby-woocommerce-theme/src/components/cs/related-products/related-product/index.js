@@ -13,16 +13,18 @@ const relatedProduct = ({ product }) => {
     const imgSrcUrl = hasImagesSizes
     ? product.image.mediaDetails.sizes[3].sourceUrl
     : "";
-    const imgWidth = hasImagesSizes
-    ? product.image.mediaDetails.sizes[3].width
-    : 450;
-    const imgHeight = hasImagesSizes
-    ? product.image.mediaDetails.sizes[3].height
-    : 450;
+    // const imgWidth = hasImagesSizes
+    // ? product.image.mediaDetails.sizes[3].width
+    // : 450;
+    // const imgHeight = hasImagesSizes
+    // ? product.image.mediaDetails.sizes[3].height
+    // : 450;
     // Set ACF repeater field 'best_for'
     let bestFor = "";
     product.additionalInformation.bestFor.map((val)=>{
         bestFor += `<li>${val.name}</li>`;
+        // To tackle error: xpected to return a value in arrow function  array-callback-return
+        return 1;
     });
     return (
         <>            

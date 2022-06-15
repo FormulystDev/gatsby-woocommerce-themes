@@ -13,20 +13,21 @@ import LogoSmallCS from "../icons/logo-small-cs"
 const Footer = ( { data } ) => {
 	const {
 		      wp: {
-			      footer: { copyrightText, socialLinks, sidebarOne, sidebarTwo },
+				// Uplers footer: { copyrightText, socialLinks, sidebarOne, sidebarTwo },
+				footer: { sidebarOne, sidebarTwo },
 		      },
 		      footerMenuItems,
 	      } = data;
 
-	const staticSocialLink = [
-		{ iconName: "facebook", iconUrl: "https://facebook.com/formulyst" },
-		{ iconName: "twitter", iconUrl: "https://twitter.com/formulyst" },
-		{
-			iconName: "instagram",
-			iconUrl: "https://www.instagram.com/codeytek_academy",
-		},
-		{ iconName: "youtube", iconUrl: "https://youtube.com/formulyst" },
-	];
+	// const staticSocialLink = [
+	// 	{ iconName: "facebook", iconUrl: "https://facebook.com/formulyst" },
+	// 	{ iconName: "twitter", iconUrl: "https://twitter.com/formulyst" },
+	// 	{
+	// 		iconName: "instagram",
+	// 		iconUrl: "https://www.instagram.com/codeytek_academy",
+	// 	},
+	// 	{ iconName: "youtube", iconUrl: "https://youtube.com/formulyst" },
+	// ];
 
 	// const socialLinksData = socialLinks.length ? socialLinks : staticSocialLink;
 
@@ -120,7 +121,7 @@ const Footer = ( { data } ) => {
 				<div className="footer__bottom">
 					<div className="cs-footer-powered tetrr">
 						<div className="d-flex flex-row justify-content-center">
-							<a href="https://www.formulyst.com/" target="_blank">
+							<a href="https://www.formulyst.com/" rel="noreferrer" target="_blank">
 								<span className="cs-text">Formulated by</span>
 								<FormulystLogo />
 							</a>

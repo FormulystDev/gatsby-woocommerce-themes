@@ -6,19 +6,19 @@ import { sanitize } from "../../utils/functions";
 const Page = (props) => {
   const { data } = props;
 
-  const hasImagesSizes =
-    null !== data.featuredImage &&
-    !isEmpty(data.featuredImage.node) &&
-    !isEmpty(data.featuredImage.node.mediaDetails.sizes);
-  const imgSrcUrl = hasImagesSizes
-    ? data.featuredImage.node.mediaDetails.sizes[0].sourceUrl
-    : "";
-  const imgWidth = hasImagesSizes
-    ? data.featuredImage.node.mediaDetails.sizes[0].width
-    : 450;
-  const imgHeight = hasImagesSizes
-    ? data.featuredImage.node.mediaDetails.sizes[0].height
-    : 450;
+  // const hasImagesSizes =
+  //   null !== data.featuredImage &&
+  //   !isEmpty(data.featuredImage.node) &&
+  //   !isEmpty(data.featuredImage.node.mediaDetails.sizes);
+  // const imgSrcUrl = hasImagesSizes
+  //   ? data.featuredImage.node.mediaDetails.sizes[0].sourceUrl
+  //   : "";
+  // const imgWidth = hasImagesSizes
+  //   ? data.featuredImage.node.mediaDetails.sizes[0].width
+  //   : 450;
+  // const imgHeight = hasImagesSizes
+  //   ? data.featuredImage.node.mediaDetails.sizes[0].height
+  //   : 450;
 
   return (
     <>
