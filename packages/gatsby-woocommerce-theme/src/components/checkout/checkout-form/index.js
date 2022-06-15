@@ -157,7 +157,7 @@ const CheckoutForm = () => {
               <div className="woo-next-place-order-btn-wrap mt-5">
                 <button
                   className="woo-next-large-black-btn woo-next-place-order-btn btn btn-dark"
-                  style={{ backgroundColor: '#fd7e35', color: '#fff', borderColor: '#fd7e35' }}
+                  style={{ backgroundColor: '#fbac23', color: '#fff', borderColor: '#fbac23' }}
                   type="submit"
                 >
                   Place Order

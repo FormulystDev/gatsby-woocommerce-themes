@@ -8,9 +8,9 @@
  import classnames from 'classnames';
  
  import DropdownIcon from '../icons/dropdown-icon';
-// Rahul import { normalizePath } from "../../utils/functions";
+// Uplers import { normalizePath } from "../../utils/functions";
  import CartIcon from "../cart/cart-icon";
-//Rahul  import WishListIcon from "../wishlist/wishlist-icon";
+//Uplers  import WishListIcon from "../wishlist/wishlist-icon";
  
  const Nav = ( props ) => {
  
@@ -76,7 +76,7 @@
 								 const parentMenuLink = (
 									 <Link
 										 className="header-nav__menu-link"
-										 to={ menu.node.url } /* Rahul normalizePath( menu.node.url ) */
+										 to={ menu.node.url } /* Uplers normalizePath( menu.node.url ) */
 									 >
 										 { menu.node.label }
 									 </Link>
@@ -137,7 +137,7 @@
 														 >
 															 <Link
 																 className="header-nav__submenu-link"
-																 to={ subMenu.url } /* Rahul normalizePath( menu.node.url ) */
+																 to={ subMenu.url } /* Uplers normalizePath( menu.node.url ) */
 															 >
 																 { subMenu.label }
 															 </Link>
@@ -161,7 +161,7 @@
 														>
 															<Link
 																className="header-nav__submenu-link"
-																to={ `/concerns/#list-${subMenu.slug}` } /* Rahul normalizePath( menu.node.url ) */
+																to={ `/concerns/#list-${subMenu.slug}` } /* Uplers normalizePath( menu.node.url ) */
 															>
 																{ subMenu.name }
 															</Link>
@@ -173,7 +173,7 @@
 									 </li>
 								 );
 							 } ) }
-							 {/*Rahul <li className="header-nav__menu-item">
+							 {/*Uplers <li className="header-nav__menu-item">
 								 <Link className="header-nav__menu-link" to="/checkout">Checkout</Link>
 							 </li> */}
 							 <li className="header-nav__menu-item">
@@ -185,7 +185,7 @@
 				 </div>
 			 </nav>
 			 <div className="cart-icon-wrap">
-				 {/*Rahul <WishListIcon/> */}
+				 {/*Uplers <WishListIcon/> */}
 				 <CartIcon/>
 				 {/*Burger menu*/}
 				 <button

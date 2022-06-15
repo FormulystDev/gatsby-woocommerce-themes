@@ -40,7 +40,7 @@ const Header = ({ data }) => {
                 />
               </figure>
             </Link>
-            {/* Rahul<div className="site-brand__content">
+            {/* Uplers<div className="site-brand__content">
               <h2 className="screen-reader-text site-brand__title">
                 {siteTitle}
               </h2>

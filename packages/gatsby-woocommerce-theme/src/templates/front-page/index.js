@@ -1,5 +1,5 @@
 import React from "react";
-// Rahul import Search from "../../components/home/search";
+// Uplers import Search from "../../components/home/search";
 import CSSectionOverview from "../../components/cs/section-overview";
 import CSRelatedProducts from "../../components/cs/related-products";
 import CSOfferBanner from "../../components/cs/offer-banner";
@@ -8,7 +8,7 @@ import CSSkinConcerns from "../../components/cs/skin-concerns";
 import CSProductBundles from "../../components/cs/product-bundles";
 import { isEmpty } from 'lodash';
 import Layout from "../../components/layout";
-// Rahul import Carousel from "../../components/home/carousel";
+// Uplers import Carousel from "../../components/home/carousel";
 import SEO from "../../components/seo";
 import { getOgImage } from "../../utils/functions";
 
@@ -19,7 +19,7 @@ const FrontPage = ( props ) => {
 				page: { title, seo, uri },
 				concern,
 				csRelatedProducts,
-			    // Rahul categories,
+			    // Uplers categories,
 			    // categoryName,
 				// postSearchData: { products, options }
 		      }
@@ -37,7 +37,7 @@ const FrontPage = ( props ) => {
 							header={ { siteTitle: 'Gatsby WooCommerce Theme' } }
 							openGraphImage={ getOgImage( seo ) }
 						/>
-						{/* Rahul<Carousel categories={ categories }/> */}
+						{/* Uplers<Carousel categories={ categories }/> */}
 						<CSSectionOverview />
 						<CSRelatedProducts
 							relatedProducts={ csRelatedProducts }
@@ -48,7 +48,7 @@ const FrontPage = ( props ) => {
 							concern = { concern }
 						/>
 						<CSProductBundles />
-						{/* Rahul<Search
+						{/* Uplers<Search
 							products={ products }
 							initialProducts={ products }
 							engine={ options }

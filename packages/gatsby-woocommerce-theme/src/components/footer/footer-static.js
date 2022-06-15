@@ -126,7 +126,7 @@ const Footer = ( { data } ) => {
 							</a>
 						</div>
 					</div>
-					{/* Rahul socialLinksData.length ? (
+					{/* Uplers socialLinksData.length ? (
 						<ul className="social-links">
 							{ socialLinksData.map( ( socialLink ) => (
 								<li key={ socialLink.iconName }>
